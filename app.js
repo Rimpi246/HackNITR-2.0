@@ -42,9 +42,6 @@ const thriftStoreSchema = new Schema({
     items: [thriftItemSchema]
 })
 
-//creating model for thrift items
-const Item = mongoose.model('ThriftItem', thriftItemSchema);
-
 //creating model for thrift store
 const ThriftStore = mongoose.model('ThriftStore', thriftStoreSchema);
 
@@ -63,8 +60,7 @@ app.route("/")
 app.route("/myStore")
     .get((req,res)=>{
     res.render("myStore");
-    })
-   
+    });
 
 app.route("/storeRegister")
     .get((req,res)=>{
@@ -94,24 +90,24 @@ app.route("/storeRegister")
         res.redirect("/");
     });
 
-    app.route("/newPost")
+app.route("/newPost/:storeName")
     .get((req,res)=>{
-    res.render("newPost");
+        res.render("newPost");
     })
     .post((req,res) => {
+        const storeName = req.params.storeName;
         const item = new Item({
             itemName: req.body.itemName,
             //FIXME: Make this a countdown timer
             dropTime: req.body.dropTime,
             itemImage: req.body.itemImage
         });
-        ThriftStore.findOne({ storeName: "Rimpi"}, (err,foundStore) => {
+        ThriftStore.findOne({ storeName: storeName}, (err,foundStore) => {
             if(foundStore){
                 foundStore.items.push(item);
                 foundStore.save(err => {
                     if(!err){
-                        console.log("Item succesfully pushed to Rimpi Store");
-                        res.redirect("/myStore");
+                        console.log("Item succesfully pushed")
                     }
                 })
             }
@@ -121,34 +117,6 @@ app.route("/storeRegister")
 
         })
     })
-
-// app.route("/newPost/:storeName")
-//     .get((req,res)=>{
-//         res.render("newPost");
-//     })
-//     .post((req,res) => {
-//         const storeName = req.params.storeName;
-//         const item = new Item({
-//             itemName: req.body.itemName,
-//             //FIXME: Make this a countdown timer
-//             dropTime: req.body.dropTime,
-//             itemImage: req.body.itemImage
-//         });
-//         ThriftStore.findOne({ storeName: storeName}, (err,foundStore) => {
-//             if(foundStore){
-//                 foundStore.items.push(item);
-//                 foundStore.save(err => {
-//                     if(!err){
-//                         console.log("Item succesfully pushed")
-//                     }
-//                 })
-//             }
-//             else{
-//                 console.log(err);
-//             }
-
-//         })
-//     })
 
 app.listen(port, () => {
     console.log(`Server started at port ${port}`);
