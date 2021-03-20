@@ -47,7 +47,14 @@ const ThriftStore = mongoose.model('ThriftStore', thriftStoreSchema);
 
 app.route("/")
     .get((req,res) =>{
-    res.render("index");
+        ThriftStore.find({},(err,store)=>{
+            console.log(store);
+                res.render("index",{
+                    storex:store,
+                });
+            
+        })
+    
     })
 
 app.route("/myStore")
@@ -80,6 +87,7 @@ app.route("/storeRegister")
                 console.log(err);
             }
         })
+        res.redirect("/");
     });
 
 app.route("/newPost/:storeName")

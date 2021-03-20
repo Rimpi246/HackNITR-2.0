@@ -1,20 +1,7 @@
 <%- include ("partials/header") %>
 
 
-    <div class="Home">
-        <header>
-            <p class="navLogo"><a href="#" class="navitem">Thrift Goodt</a></p>
-            <nav>
-                <ul class="nav_links">
-                    <li><a href="/myStore" class="navitem">My Store</a></li>
-                    <li><a href="/storeRegister" class="navitem">New Store</a></li>
-                    <li><a href="/newPost/:storeName" class="navitem">New Post</a></li>
-                    <li><a href="#" class="navitem">LogIn</a></li>
-                    <li><a href="#" class="navitem">SignUp</a></li>
-                    
-                </ul>
-            </nav>
-        </header>
+    
         <div class="SearchBox">
             <table class="SearchBar">
                 <tr>
@@ -27,16 +14,19 @@
                 </tr>
             </table>
         </div>
-
+        <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_MTEnXT.json"  background="transparent"  speed="0.5"  style="z-index:-100;position:fixed;width: 100vw; height: 100vh;"  loop  autoplay></lottie-player>
+    
+   
     
     </div>
-   
     <!-- Upcoming Drop Posts -->
-    <h2>Upcoming Drops!</h2>
+    
     
     <!-- Posts of upcoming drops say in coming 2 days to be rendered in the home page with a live countdown of the droptime -->
     <!-- Cards to be used in myStore as individual posts instead-->
-
+    
+    <div class="store">
+    <h2>Store-1</h2>
     <div class="Facilitycontainer">
         <div class="Cardcontainer">
             <div class="Fcard">
@@ -74,5 +64,89 @@
             </div>
         </div>
     </div>
+</div>
+<div class="store">
+    <h2>Store-2</h2>
+    <div class="Facilitycontainer">
+        <div class="Cardcontainer">
+            <div class="Fcard">
+                <div class="Fcontent">
+                    <div class="iconborder">
+                        <span class="far fa-user"></span>
+                    </div>
+                    <br>
+                    <h3>TRAVEL GUIDES</h3>
+                </div>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, voluptatibu
+                    eiugid satrebjl5s 5ujsho 5sy ab?</p>
+            </div>
+            <div class="Fcard">
+                <div class="Fcontent">
+                    <div class="iconborder">
+                        <span class="fas fa-utensils"></span>
+                    </div>
+                    <br>
+                    <h3>Best Local Foods</h3>
+                </div>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, voluptatibu
+                    eiugid satrebjl5s 5ujsho 5sy ab?</p>
+            </div>
+            <div class="Fcard">
+                <div class="Fcontent">
+                    <div class="iconborder">
+                        <span class="fas fa-car"></span>
+                    </div>
+                    <br>
+                    <h3>Tours</h3>
+                </div>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, voluptatibu
+                    eiugid satrebjl5s 5ujsho 5sy ab?</p>
+            </div>
+        </div>
+    </div>
+</div>
+    <% storex.forEach(store => {%>
+        <div class="store">
+            <h2><%=store.storeName%></h2>
+            <div class="Facilitycontainer">
+                <div class="Cardcontainer">
+                    <div class="Fcard">
+                        <div class="Fcontent">
+                            <div class="iconborder">
+                                <span class="far fa-user"></span>
+                            </div>
+                            <br>
+                            <h3>TRAVEL GUIDES</h3>
+                        </div>
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, voluptatibu
+                            eiugid satrebjl5s 5ujsho 5sy ab?</p>
+                    </div>
+                    <div class="Fcard">
+                        <div class="Fcontent">
+                            <div class="iconborder">
+                                <span class="fas fa-utensils"></span>
+                            </div>
+                            <br>
+                            <h3>Best Local Foods</h3>
+                        </div>
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, voluptatibu
+                            eiugid satrebjl5s 5ujsho 5sy ab?</p>
+                    </div>
+                    <div class="Fcard">
+                        <div class="Fcontent">
+                            <div class="iconborder">
+                                <span class="fas fa-car"></span>
+                            </div>
+                            <br>
+                            <h3>Tours</h3>
+                        </div>
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, voluptatibu
+                            eiugid satrebjl5s 5ujsho 5sy ab?</p>
+                    </div>
+                </div>
+            </div>
+        </div>                
+    <%}); %> 
+
 
     <%- include ("partials/footer") %>
