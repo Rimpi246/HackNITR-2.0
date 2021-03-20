@@ -48,7 +48,7 @@ const ThriftStore = mongoose.model('ThriftStore', thriftStoreSchema);
 app.route("/")
     .get((req,res) =>{
         ThriftStore.find({},(err,store)=>{
-            console.log(store);
+            // console.log(store);
                 res.render("index",{
                     storex:store,
                 });
@@ -59,7 +59,12 @@ app.route("/")
 
 app.route("/myStore")
     .get((req,res)=>{
-    res.render("myStore");
+        ThriftStore.findOne({storeName:"My Store"},(err,mystr)=>{
+            res.render("myStore",{
+                store:mystr,
+            });
+        })
+    
     });
 
 app.route("/storeRegister")
