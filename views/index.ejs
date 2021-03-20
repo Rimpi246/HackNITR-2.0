@@ -27,6 +27,8 @@
     
     <div class="store">
     <h2>Store-1</h2>
+    <p>View <a href="/myStore">Store-1</a></p>
+    <h3>Dropping Shoes in :</h3>
     <div class="Facilitycontainer">
         <div class="Cardcontainer">
             <div class="Fcard">
@@ -35,7 +37,7 @@
                         <span class="far fa-user"></span>
                     </div>
                     <br>
-                    <h3>TRAVEL GUIDES</h3>
+                    <h3>Item 3</h3>
                 </div>
                 <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, voluptatibu
                     eiugid satrebjl5s 5ujsho 5sy ab?</p>
@@ -46,7 +48,7 @@
                         <span class="fas fa-utensils"></span>
                     </div>
                     <br>
-                    <h3>Best Local Foods</h3>
+                    <h3>Item 2</h3>
                 </div>
                 <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, voluptatibu
                     eiugid satrebjl5s 5ujsho 5sy ab?</p>
@@ -57,7 +59,7 @@
                         <span class="fas fa-car"></span>
                     </div>
                     <br>
-                    <h3>Tours</h3>
+                    <h3>Item 1</h3>
                 </div>
                 <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, voluptatibu
                     eiugid satrebjl5s 5ujsho 5sy ab?</p>
@@ -67,6 +69,7 @@
 </div>
 <div class="store">
     <h2>Store-2</h2>
+    <p>View <a href="/" class="">Store-2</a></p>
     <div class="Facilitycontainer">
         <div class="Cardcontainer">
             <div class="Fcard">
@@ -75,7 +78,7 @@
                         <span class="far fa-user"></span>
                     </div>
                     <br>
-                    <h3>TRAVEL GUIDES</h3>
+                    <h3>Item 3</h3>
                 </div>
                 <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, voluptatibu
                     eiugid satrebjl5s 5ujsho 5sy ab?</p>
@@ -86,7 +89,7 @@
                         <span class="fas fa-utensils"></span>
                     </div>
                     <br>
-                    <h3>Best Local Foods</h3>
+                    <h3>Item 2</h3>
                 </div>
                 <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, voluptatibu
                     eiugid satrebjl5s 5ujsho 5sy ab?</p>
@@ -97,7 +100,7 @@
                         <span class="fas fa-car"></span>
                     </div>
                     <br>
-                    <h3>Tours</h3>
+                    <h3>Item 1</h3>
                 </div>
                 <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, voluptatibu
                     eiugid satrebjl5s 5ujsho 5sy ab?</p>
@@ -108,6 +111,9 @@
     <% storex.forEach(store => {%>
         <div class="store">
             <h2><%=store.storeName%></h2>
+            <p>View <a href="/myStore" class=""><%=store.storeName%></a></p>
+            <h3>Dropping <%= store.items %> in :</h3>
+            <!-- Countdown  -->
             <div class="Facilitycontainer">
                 <div class="Cardcontainer">
                     <div class="Fcard">
@@ -116,7 +122,7 @@
                                 <span class="far fa-user"></span>
                             </div>
                             <br>
-                            <h3>TRAVEL GUIDES</h3>
+                            <h3>Item 3</h3>
                         </div>
                         <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, voluptatibu
                             eiugid satrebjl5s 5ujsho 5sy ab?</p>
@@ -127,7 +133,7 @@
                                 <span class="fas fa-utensils"></span>
                             </div>
                             <br>
-                            <h3>Best Local Foods</h3>
+                            <h3>Item 2</h3>
                         </div>
                         <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, voluptatibu
                             eiugid satrebjl5s 5ujsho 5sy ab?</p>
@@ -138,7 +144,7 @@
                                 <span class="fas fa-car"></span>
                             </div>
                             <br>
-                            <h3>Tours</h3>
+                            <h3>Item 1</h3>
                         </div>
                         <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, voluptatibu
                             eiugid satrebjl5s 5ujsho 5sy ab?</p>
