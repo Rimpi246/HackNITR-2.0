@@ -219,7 +219,10 @@ button {
   margin: 0 10px;
   font-size: 24px;
 }
-
+.iconImage{
+  height: inherit;
+  width: inherit;
+}
 /* footer */
 footer {
   bottom: 0px;
@@ -252,9 +255,13 @@ footer {
 
 .store{
   justify-content: center;
-  align-items: center;
+  align-items:left;
   display: flex;
   flex-direction: column;
   border-bottom: #dbdcdd 1px solid;
-  margin: 2%;
+  margin-top: 6%;
+}
+.titlle{
+  margin-left: 5%;
+  margin-top: 5%;
 }
