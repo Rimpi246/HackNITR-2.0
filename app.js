@@ -40,10 +40,7 @@ mongoose.connect("mongodb://localhost:27017/thriftDB", {
 const thriftItemSchema = new Schema(
   {
     itemName: String,
-    dropTime: {
-      //TODO: This will be a countdown timer
-      type: Date,
-    },
+    dropTime: Date,
     img: {
       data: Buffer,
       type: String,
@@ -51,10 +48,7 @@ const thriftItemSchema = new Schema(
     },
     desc: String,
 
-    // dateAdded: {
-    //     type: String
-    //     // type: Date
-    // }
+    // dateAdded: Date,
   },
   { typeKey: "$type" }
 );
@@ -74,10 +68,10 @@ const ThriftStore = mongoose.model("ThriftStore", thriftStoreSchema);
 const Item = mongoose.model("Item", thriftItemSchema);
 app.route("/").get((req, res) => {
   ThriftStore.find({}, (err, store) => {
-    console.log(store[0].items);
+    console.log(store.items);
     res.render("index", {
       storex: store,
-      post: store[0].items,
+      // post: store[0].items,
     });
   });
 });
@@ -88,6 +82,7 @@ app.route("/home").get((req, res) => {
 
 app.route("/myStore").get((req, res) => {
   Item.find({}, (err, items) => {
+    console.log(items);
     res.render("myStore", {
       items: items,
     });
