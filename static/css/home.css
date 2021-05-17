@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+body {
+  background-image: linear-gradient(#ea8d8d, #a890fe);
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+.web-shopping-svg {
+  width: 500px;
+}
+.web-shopping-svg svg {
+  width: 400px;
+}
+/* #Girl-body {
+  animation: up 0.5s infinite alternate;
+} */
+#line {
+  visibility: hidden;
+}
+@keyframes up {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(20deg);
+  }
+}
+
+#Girl-head {
+  animation: tilt 1s infinite alternate;
+}
+@keyframes tilt {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(20deg);
+  }
+}
+#hair {
+  animation: hair 1s infinite alternate;
+}
+@keyframes hair {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(2deg);
+  }
+}
+#left-hand1 {
+  animation: left 1s infinite linear;
+  transform-origin: center;
+}
+@keyframes left {
+  0% {
+    transform: rotateY(2deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+#right-hand1,
+#full-phone {
+  animation: right 1s infinite alternate;
+  transform-origin: bottom left;
+}
+@keyframes right {
+  0% {
+    transform: rotate(0deg) translate(0px);
+  }
+
+  50% {
+    transform: rotate(-5deg) translate(0px);
+  }
+
+  100% {
+    transform: rotate(0deg) translate(0px);
+  }
+}
+#full-phone {
+  animation: phone 1s infinite alternate;
+  transform-origin: bottom left;
+}
+@keyframes phone {
+  0% {
+    transform: rotate(0deg) translate(0px);
+  }
+
+  50% {
+    transform: rotate(-8deg) translate(0px);
+  }
+
+  100% {
+    transform: rotate(0deg) translate(0px);
+  }
+}
+#Item1 {
+  animation: changeColor 1s infinite alternate;
+}
+@keyframes changeColor {
+  0% {
+    fill: #f2f2f2;
+  }
+  100% {
+    fill: red;
+  }
+}
+
+#home-wave {
+  height: 100vh;
+  transform: rotate(180deg);
+}
+
+#girl {
+  animation: girl 1s infinite linear;
+}
+
+@keyframes girl {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(20deg);
+  }
+}
+#right-hand {
+  animation: right-hand 1s infinite linear;
+  transform-origin: 0%;
+  transform-box: fill-box;
+}
+
+#left-hand {
+  animation: left-hand 1s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes right-hand {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(30deg);
+  }
+}
+
+@keyframes left-hand {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(-30deg);
+  }
+}
+
+.profile-card-1 {
+  font-family: "Open Sans", Arial, sans-serif;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  width: 100%;
+  color: #ffffff;
+  text-align: center;
+  height: 368px;
+  border: none;
+}
+.profile-card-1 .background {
+  width: 100%;
+  vertical-align: top;
+  opacity: 0.9;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  -webkit-transform: scale(1.8);
+  transform: scale(2.8);
+}
+.profile-card-1 .card-content {
+  width: 100%;
+  padding: 15px 25px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+.profile-card-1 .profile {
+  border-radius: 50%;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  max-width: 100px;
+  opacity: 1;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 1);
+  -webkit-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+}
+.profile-card-1 h2 {
+  margin: 0 0 5px;
+  font-weight: 600;
+  font-size: 25px;
+}
+.profile-card-1 h2 small {
+  display: block;
+  font-size: 15px;
+  margin-top: 10px;
+}
+.profile-card-1 i {
+  display: inline-block;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  border: 1px solid #fff;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+.profile-card-1 .icon-block {
+  float: left;
+  width: 100%;
+  margin-top: 15px;
+}
+.profile-card-1 .icon-block a {
+  text-decoration: none;
+}
+.profile-card-1 i:hover {
+  background-color: #fff;
+  color: #2e3434;
+  text-decoration: none;
+}
